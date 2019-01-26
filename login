@@ -1,30 +1,41 @@
 <!doctype html>
 <html>
 <head>
-  <title>Employee Login</title>
+  <title>Demo Login</title>
   <style>
-  form {
+  body {
+    background-color: rgb(209, 209, 209);
+  }
+
+  /* form {
     border: 3px solid #f1f1f1;
-    background-color: rgb(245, 239, 223);
+    background-color: rgb(209, 209, 209);
+  } */
+
+  label {
+    font-family: candara
   }
 
   input[type=text], input[type=password] {
-    width: 100%;
+    width: 80%;
     padding: 12px 20px;
-    margin: 8px 0;
+    margin: auto;
     display: inline-block;
     border: 1px solid #ccc;
     box-sizing: border-box;
+    font-family: candara
   }
 
+
   button {
-    background-color: #4CAF50;
+    background-color: #8a0032;
     color: white;
     padding: 14px 20px;
-    margin: 8px 0;
+    margin: auto;
     border: none;
     cursor: pointer;
-    width: 100%;
+    width: 30%;
+    font-family: candara
   }
 
   button:hover {
@@ -43,6 +54,9 @@
 
   .container {
     padding: 16px;
+    width: 25%;
+    margin: auto;
+    /*border: 4px solid #ffffff;*/
   }
 
   @media screen and (max-width: 300px) {
@@ -54,18 +68,19 @@
   </style>
 </head>
 <body>
-
-  <form method="post" action="Demo3.html">
+  <form method="post" action="demo">
     <div class="imgcontainer">
-      <img src="logo.jpg" class="logo">
+      <img src="hokie spot.png" class="logo">
     </div>
     <div class="container">
       <label><b>Username</b></label>
       <input type="text" placeholder="Enter Username" name="uname">
-
+      <br/>
+      <br/>
       <label><b>Password</b></label>
       <input type="password" placeholder="Enter Password" name="pass">
-
+      <br/>
+      <br/>
       <button type="submit" name="submit" value="Login">Login</button>
       <label>
         <input type="checkbox" checked="checked" name="remember"> Remember me

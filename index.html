@@ -1,0 +1,119 @@
+<!doctype html>
+<html>
+<head>
+  <meta name="google-signin-client_id" content="310817647192-rjn39jnofvspoamvd2435r889jnijarn.apps.googleusercontent.com">
+  <title>Demo Login</title>
+  <style>
+  body {
+    background-color: rgb(209, 209, 209);
+  }
+
+  /* form {
+    border: 3px solid #f1f1f1;
+    background-color: rgb(209, 209, 209);
+  } */
+
+  label {
+    font-family: candara;
+    font-size: 12;
+  }
+
+  input[type=text], input[type=password] {
+    width: 80%;
+    padding: 12px 20px;
+    margin: auto;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+    font-family: candara
+  }
+
+  button {
+    background-color: #8a0032;
+    color: white;
+    padding: 14px 20px;
+    border: none;
+    cursor: pointer;
+    width: 30%;
+    font-family: candara;
+    margin: auto;
+  }
+
+  button:hover {
+    opacity: 0.8;
+  }
+
+  .imgcontainer {
+    text-align: center;
+    margin: 24px 0 12px 0;
+  }
+
+  img.logo {
+    border-radius: 35%;
+    height: 200px;
+  }
+
+  .container {
+    padding: 16px;
+    width: 25%;
+    margin: auto;
+    border: 3px solid #ffffff;
+  }
+
+  @media screen and (max-width: 300px) {
+    span.pass {
+      display: block;
+      float: none;
+    }
+  }
+  </style>
+</head>
+<body>
+  <form method="post" action="menu.html">
+    <div class="imgcontainer">
+      <img src="hokie spot.png" class="logo">
+    </div>
+    <div class="container">
+      <label><b>Username</b></label>
+      <br/>
+      <input type="text" placeholder="Enter Username" name="uname">
+      <br/>
+      <br/>
+      <label><b>Password</b></label>
+      <br/>
+      <input type="password" placeholder="Enter Password" name="pass">
+      <br/>
+      <br/>
+
+      <div class="g-signin2" data-onsuccess="onSignIn"></div>
+      <script src="https://apis.google.com/js/platform.js" async defer></script>
+      <script>
+      function onSignIn(googleUser) {
+        var profile = googleUser.getBasicProfile();
+        console.log('Name: ' + profile.getName());
+        console.log('Email: ' + profile.getEmail()); // This is null if the 'email' scope is not present.
+      }
+      function onFailure(error) {
+        console.log(error);
+      }
+      function renderButton() {
+        gapi.signin2.render('my-signin2', {
+          'scope': 'profile email',
+          'width': 240,
+          'height': 50,
+          'longtitle': true,
+          'theme': 'dark',
+          'onsuccess': onSuccess,
+          'onfailure': onFailure
+        });
+      }
+      </script>
+      
+      <button type="submit" name="submit" value="Login">Login</button>
+      <label>
+        <input type="checkbox" checked="checked" name="remember"> Remember me
+      </label>
+    </div>
+  </form>
+</body>
+</html>

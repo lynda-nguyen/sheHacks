@@ -1,0 +1,66 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <title>Drop-Down Menu</title>
+  <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+  <link rel="stylesheet" href="/resources/demos/style.css">
+  <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+  <script>
+  $( function() {
+    $( "#dialog" ).dialog();
+  } );
+  </script>
+  <style>
+    nav {
+      font-weight: bold;
+      color: White;
+      background-color: royalblue;
+      border-width: 2px;
+      border-style: solid;
+      border-color: royalblue;
+      width: 10em;
+      text-align: center;
+    }
+    nav ul {
+      display: none;
+      list-style: none;
+      margin: 0;
+      padding: 0;
+    }
+    nav:hover ul {
+      display: block;
+    }
+    nav ul li {
+      background-color: White;
+      color: black;
+      border-top: 2px solid royalblue;
+    }
+    nav ul li:hover {
+      background-color: powderblue;
+      font-style: italic;
+    }
+  </style>
+  <script>
+  function myFunction() {
+    alert("Hello! I am an alert box!","The");
+  }
+  </script>
+</head>
+<body>
+
+  <nav>Menu
+    <ul>
+      <li><a href="#">Home</a></li>
+
+      <li><a href="#">News</a></li>
+      <li><a href="#">Articles</a></li>
+      <li onclick="myFunction()"><a href="#">Blog</a></li>
+
+      <!-- <button onclick="myFunction()">Try it</button> -->
+      <li><a href="#">Contact</a></li>
+    </ul>
+  </nav>
+</body>
+</html>
